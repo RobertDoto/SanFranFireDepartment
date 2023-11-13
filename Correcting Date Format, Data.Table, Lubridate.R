@@ -1,6 +1,7 @@
 library(data.table)
 library(lubridate)
 
+#initialise runtime start variable
 start_time <- Sys.time()
 
 # read the CSV file into a data.table
@@ -54,7 +55,7 @@ data_1_corrected <- parse_format_datetime_mdy(data_1_corrected, datetime_columns
 fwrite(data_1_corrected, "C:/Users/PC/Downloads/fire-calls-truncated-comma-no-spaces-corrected.csv")
 
 
-
+#initialise runtime start variable and calculate runtime of script
 end_time <- Sys.time()
 runtime <- end_time - start_time
 print(runtime)
